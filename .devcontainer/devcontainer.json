@@ -1,6 +1,6 @@
 {
   "name": "Codex App Template (Node 24)",
-  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-24-bookworm",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:5-24-bookworm"
   "remoteUser": "node",
   "postCreateCommand": "npm ci --include=dev && npm run setup",
   "forwardPorts": [5173, 4173],
