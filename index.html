@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>アプリ開発テンプレート</title>
+  </head>
+  <body>
+    <main>
+      <p class="eyebrow">DEVELOPMENT STARTER</p>
+      <h1 id="app-name">アプリ開発テンプレート</h1>
+      <p>仕様を書き、小さく実装し、テストで確かめる。</p>
+      <section aria-labelledby="demo-title">
+        <h2 id="demo-title">動作確認</h2>
+        <p>名前を入力して、最初の操作を試してください。</p>
+        <form id="greeting-form">
+          <label for="name">名前（任意・40文字まで）</label>
+          <input id="name" name="name" type="text" maxlength="40" autocomplete="given-name" />
+          <button type="submit">あいさつする</button>
+        </form>
+        <p id="message" role="status" aria-live="polite">準備ができました。</p>
+      </section>
+      <p class="hint">開発手順はリポジトリの README.md を確認してください。</p>
+    </main>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>

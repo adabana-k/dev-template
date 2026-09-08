@@ -1,0 +1,53 @@
+name: 機能追加
+description: 日本語で要件と完了条件を定義する
+title: "[Feature] "
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: 概要
+      description: 実装する機能と対象ユーザー
+    validations:
+      required: true
+  - type: textarea
+    id: background
+    attributes:
+      label: 背景
+      description: 解決する課題とproduct.mdとの整合性
+    validations:
+      required: true
+  - type: textarea
+    id: requirements
+    attributes:
+      label: 要件
+      description: 要件ID、入力、出力、エラー、境界条件
+      placeholder: "FR-XXX: ..."
+    validations:
+      required: true
+  - type: textarea
+    id: out_of_scope
+    attributes:
+      label: 非対象
+      description: 今回実装しない範囲
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      value: |
+        - [ ] 具体的な受け入れ条件を記入する
+        - [ ] npm run test が成功する
+        - [ ] npm run lint が成功する
+        - [ ] npm run build が成功する
+    validations:
+      required: true
+  - type: textarea
+    id: documentation
+    attributes:
+      label: Documentation
+      value: |
+        - docs/features.md
+        - docs/requirements.md
+    validations:
+      required: true

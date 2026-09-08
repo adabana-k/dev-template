@@ -1,0 +1,18 @@
+{
+  "name": "Codex App Template (Node 24)",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:1-24-bookworm",
+  "remoteUser": "node",
+  "postCreateCommand": "npm ci --include=dev && npm run setup",
+  "forwardPorts": [5173, 4173],
+  "portsAttributes": {
+    "5173": { "label": "App development", "onAutoForward": "notify", "visibility": "private" },
+    "4173": { "label": "Build preview", "onAutoForward": "silent", "visibility": "private" }
+  },
+  "containerEnv": { "TZ": "Asia/Tokyo" },
+  "customizations": {
+    "vscode": {
+      "extensions": ["dbaeumer.vscode-eslint", "GitHub.vscode-pull-request-github"],
+      "settings": { "editor.tabSize": 2, "files.eol": "\n" }
+    }
+  }
+}

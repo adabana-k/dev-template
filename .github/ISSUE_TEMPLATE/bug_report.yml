@@ -1,0 +1,32 @@
+name: 不具合
+description: 再現手順と期待する動作を報告する
+title: "[Bug] "
+body:
+  - type: textarea
+    id: actual
+    attributes:
+      label: 発生した問題
+      description: 現象と影響範囲。秘密情報は含めない。
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: 再現手順
+      value: |
+        1. 
+        2. 
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 期待する動作と完了条件
+      description: 関連する要件ID、回帰テスト、ドキュメント更新対象
+    validations:
+      required: true
+  - type: input
+    id: environment
+    attributes:
+      label: 環境
+      placeholder: OS / ブラウザー / Nodeバージョン / commit

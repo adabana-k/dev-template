@@ -1,0 +1,29 @@
+# 配信先未選定。検証済み成果物を手動作成する拡張口であり本番デプロイではない。
+name: Deployment preparation (no publish)
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  prepare:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+      - run: npm ci --include=dev
+      - run: npm run check
+      - uses: actions/upload-artifact@v4
+        with:
+          name: app-dist
+          path: dist/
+          if-no-files-found: error
+          retention-days: 7
